@@ -10,6 +10,8 @@
  * @package WordPress
  */
 
+require_once 'wp-password.php';
+
 /**
  * Stores the location of the WordPress directory of functions, classes, and core content.
  *
