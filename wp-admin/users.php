@@ -273,6 +273,7 @@ case 'doremove':
 	if ( ! current_user_can( 'remove_users' ) )
 		wp_die( __( 'You can&#8217;t remove users.' ) );
 
+
 	$userids = $_REQUEST['users'];
 
 	$update = 'remove';
@@ -289,7 +290,7 @@ case 'doremove':
 		remove_user_from_blog($id, $blog_id);
 	}
 
-	$redirect = add_query_arg( array('update' => $update), $redirect);
+  $redirect = add_query_arg( array('update' => $update), $redirect);
 	wp_redirect($redirect);
 	exit;
 
